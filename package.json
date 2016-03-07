@@ -1,0 +1,12 @@
+{
+  "name": "Flapper",
+  "version": "0.0.0",
+  "description": "dependencies for the app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "David Villanueva",
+  "license": "ISC"
+}

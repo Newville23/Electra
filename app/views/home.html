@@ -1,0 +1,59 @@
+
+<div ng-controller="MainCtrl">
+
+  <md-list  ng-cloak class="list" layout-align="center center">
+    <md-subheader class="md-no-sticky">Armarios</md-subheader>
+    <md-list-item class="item " layout  ng-repeat="product in products  | orderBy : '-quantity'">
+        <div class="md-no-style md-list-item-inner md-ink-ripple">
+
+          <p> {{product.name}} </p>
+          <p>{{product.dealer}}</p>
+          <p> {{product.cost | currency}} </p>
+          <p>{{product.quantity}}  </p>
+          <md-checkbox class="md-secondary" ng-model="topping.wan"></md-checkbox>
+          <!-- <md-button ng-click="quantity(product)" class="md-icon-button md-accent" aria-label="Favorite">
+              +
+          </md-button> -->
+
+        </div>
+
+    </md-list-item>
+  </md-list>
+
+  <!-- <md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="name">
+      </md-input-container>
+      <md-input-container>
+        <label>Cost</label>
+        <input type="number" ng-model="cost">
+      </md-input-container>
+      <md-input-container>
+        <label>Position</label>
+        <input ng-model="position">
+      </md-input-container>
+      <md-input-container>
+        <label>Dealer</label>
+        <input ng-model="dealer">
+      </md-input-container>
+      <md-button ng-click="addProduct()">ADD</md-button>
+    </div>
+  </md-content> -->
+
+</div>
+
+<div class="" ng-controller="BrandCtrl">
+  <md-list  ng-cloak class="list" layout-align="center center">
+    <md-subheader class="md-no-sticky">Marcas eléctricas</md-subheader>
+    <md-list-item class="item " layout  ng-repeat="brand in brands">
+        <div class="md-no-style md-list-item-inner md-ink-ripple">
+
+          <p> {{brand.name}} </p>
+          <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+        </div>
+
+    </md-list-item>
+  </md-list>
+</div>
