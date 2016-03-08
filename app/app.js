@@ -17,7 +17,10 @@ app.factory('products', [function() {
           {id: 'A2C', Imin: 125, Imax: 250, Icu: 50, price: 686000, discount: 55},
           {id: 'A2N', Imin: 125, Imax: 250, Icu: 85, price: 740000, discount: 55},
           {id: 'A3N', Imin: 320, Imax: 630, Icu: 85, price: 3228100, discount: 55},
-        ] },
+        ],
+        in: [15, 30, 40, 60,],
+        min: [10, 20, 30, 63]
+       },
 
       {id: 'P02', name: 'Chint',
         breakers: [
@@ -28,7 +31,10 @@ app.factory('products', [function() {
           {id: 'NM1-630S', Imin: 400, Imax: 630, Icu: 50, price: 1070000, discount: 58 },
           {id: 'NM1-800H', Imin: 700, Imax: 800, Icu: 85, price: 2070000, discount: 58 },
           {id: 'NM1-1250H', Imin: 1000, Imax: 1250, Icu: 85, price: 3300000, discount: 58 },
-        ] }
+        ],
+        in: [60, 80, 70, 100],
+        min: [15, 32, 63]
+       }
     ]
   } ;
   return o ;
@@ -53,7 +59,9 @@ app.config([
 app.controller('MainCtrl', [
   '$scope', 'products',
   function($scope, products){
+
     $scope.products = products.products;
+    $scope.brands = products.brands;
     $scope.test = 'Hello world!';
 
     $scope.addProduct = function() {
@@ -81,4 +89,13 @@ app.controller('BrandCtrl', [
 function($scope, $stateParams, products){
   $scope.brands = products.brands;
 
-}])
+}]);
+
+app.controller('InCtrl', [
+  '$scope',
+  'products',
+  function($scope, products){
+    $scope.brands = products.brands;
+
+  }
+])
