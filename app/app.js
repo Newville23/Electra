@@ -2,12 +2,14 @@ var app = angular.module('Sinventory', ['ngMaterial', 'ui.router']);
 
 app.factory('products', [function() {
   var o = {
+    cot: [],
+
     products: [
-      { name : 'Armario para 6 medidores',  dimdention : { high: 1200 , width: 800 , deep: 400 }, price : 790982,   dealer: "Soluciones de ingeniería A&H ", quantity: 1 },
-      { name : 'Armario para 9 medidores',  dimdention : { high: 1800 , width: 800 , deep: 400 }, price : 961200,   dealer: "Soluciones de ingeniería A&H ", quantity: 1 },
-      { name : 'Armario para 12 medidores', dimdention : { high: 1850 , width: 1000 , deep: 400 }, price : 1047200,  dealer: "Soluciones de ingeniería A&H ", quantity: 1},
-      { name : 'Armario para 18 medidores', dimdention : { high: 1850 , width: 1600 , deep: 400 }, price : 1467800,  dealer: "Soluciones de ingeniería A&H ", quantity: 1},
-      { name : 'Armario para 24 medidores', dimdention : { high: 1850 , width: 2000 , deep: 400 }, price : 2010000,  dealer: "Soluciones de ingeniería A&H ", quantity: 1}
+      { name : 'Armario para 6 medidores', medidores: 6, dimdention : { high: 1200 , width: 800 , deep: 400 }, price : 790982,   dealer: "Soluciones de ingeniería A&H ", quantity: 1 },
+      { name : 'Armario para 9 medidores', medidores: 9,  dimdention : { high: 1800 , width: 800 , deep: 400 }, price : 961200,   dealer: "Soluciones de ingeniería A&H ", quantity: 1 },
+      { name : 'Armario para 12 medidores', medidores: 12, dimdention : { high: 1850 , width: 1000 , deep: 400 }, price : 1047200,  dealer: "Soluciones de ingeniería A&H ", quantity: 1},
+      { name : 'Armario para 18 medidores', medidores: 18, dimdention : { high: 1850 , width: 1600 , deep: 400 }, price : 1467800,  dealer: "Soluciones de ingeniería A&H ", quantity: 1},
+      { name : 'Armario para 24 medidores', medidores: 24, dimdention : { high: 1850 , width: 2000 , deep: 400 }, price : 2010000,  dealer: "Soluciones de ingeniería A&H ", quantity: 1}
 
     ],
     brands: [
@@ -19,6 +21,7 @@ app.factory('products', [function() {
           {id: 'A3N', Imin: 320, Imax: 630, Icu: 85, price: 3228100, discount: 55},
         ],
         in: [15, 30, 40, 60,],
+        icu: [10,25,50,85],
         min: [10, 20, 30, 63]
        },
 
@@ -32,7 +35,8 @@ app.factory('products', [function() {
           {id: 'NM1-800H', Imin: 700, Imax: 800, Icu: 85, price: 2070000, discount: 58 },
           {id: 'NM1-1250H', Imin: 1000, Imax: 1250, Icu: 85, price: 3300000, discount: 58 },
         ],
-        in: [60, 80, 70, 100],
+        in: [60, 80, 70, 100, 450],
+        icu: [10,25,50,85],
         min: [15, 32, 63]
        }
     ]
@@ -64,18 +68,36 @@ app.controller('MainCtrl', [
     $scope.brands = products.brands;
     $scope.test = 'Hello world!';
 
-    $scope.addProduct = function() {
-      if(!$scope.name || $scope.name == ""){  return;}
-      $scope.products.push({
-        name: $scope.name ,
-        position: $scope.position,
-        dealer: $scope.dealer,
-        quantity: 1
+    $scope.createCot = function() {
+      if(!$scope.newArmario || $scope.newArmario == ""){  return;}
+      $scope.cot.push({
+        Armario: $scope.newArmario ,
+        brand: $scope.newBrand,
+        In : $scope.newIn,
+        Icu : $scope.newIcu
       });
-      $scope.name = "";
-      $scope.position = "";
-      $scope.dealer = "";
+      $scope.newArmario = "";
+      $scope.newBrand = "";
+      $scope.newIn = "";
+      $scope.newIcu = "";
     };
+
+    $scope.total = function() {
+	        var total = 0;
+	        angular.forEach($scope.newBrand.breakers, function(breaker) {
+
+            if ($scope.newI > breaker.Imin && $scope.newI < breaker.Imax) {
+              total = breaker.price + $scope.newArmario.price;
+            }
+
+
+
+        });
+
+
+        	return total;
+    };
+
     $scope.quantity = function(product){
       product.quantity += 1;
     };

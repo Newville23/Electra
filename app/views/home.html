@@ -1,20 +1,22 @@
+<div ng-controller="MainCtrl">
 
 
-<div ng-controller="MainCtrl" class="md-padding" ng-cloak>
+
+<div  class="md-padding" ng-cloak>
   <md-content class="md-whiteframe-1dp md-padding">
-    <h1 class="md-title">Selecciona el armario que necesites</h1>
+    <h2 class="md-title">Selecciona el armario que necesites</h2>
     <div layout="row">
       <md-input-container class="">
         <label>Escoja su armario</label>
         <md-select ng-model="newArmario">
-          <md-option ng-repeat="product in products" ng-value="product.name">{{product.name}}</md-option>
+          <md-option ng-repeat="product in products" ng-value="product">{{product.name}}</md-option>
         </md-select>
       </md-input-container>
     </div>
 
   <md-divider ng-if="!$last"></md-divider>
 
-    <h1 class="md-title">Selecciona tu marca preferida</h1>
+    <h2 class="md-title">Selecciona tu marca preferida</h2>
     <div layout="row">
       <md-input-container class="">
         <label>Escoja su marca</label>
@@ -26,17 +28,42 @@
 
     <md-divider ng-if="!$last"></md-divider>
 
-    <h1 class="md-title">Selecciona la corriente nominal y de ruptura</h1>
+    <h2 class="md-title">Selecciona la corriente para tu interruptor principal</h2>
     <div layout="row">
       <md-input-container class="">
         <label>I nominal</label>
         <md-select ng-model="newI">
-          <md-option ng-repeat="In in newBrand.in" ng-value="In">{{In}}</md-option>
+          <md-option ng-repeat="In in newBrand.in" ng-value="In">{{In}} A</md-option>
         </md-select>
       </md-input-container>
+
     </div>
 
-  </md-content>
+        <md-divider ng-if="!$last"></md-divider>
 
-<pre>form = {{ newBrand | json}}</pre>
+        <h2 class="md-title">Selecciona la corriente para tus mini-interruptores</h2>
+        <div layout="row">
+          <md-input-container class="">
+            <label>I nominal</label>
+            <md-select ng-model="newImin">
+              <md-option ng-repeat="Imin in newBrand.min" ng-value="Imin">{{Imin}} A</md-option>
+            </md-select>
+          </md-input-container>
+
+        </div>
+
+  </md-content>
 </div>
+
+<div class="md-padding" ng-cloak ng-show="newImin" >
+  <md-content class="md-whiteframe-1dp md-padding" >
+    <md-list-item>
+    <p> {{ newArmario.name }} </p>
+    <p> Total: {{total() | currency}}</p>
+
+    </md-list-item>
+  </md-content>
+</div>
+
+</div>
+<!-- <pre>form = {{ newBrand | json}}</pre> -->
