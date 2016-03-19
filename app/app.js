@@ -39,6 +39,36 @@ app.factory('products', [function() {
         icu: [10,25,50,85],
         min: [15, 32, 63]
        }
+    ],
+    components: [
+      bars: [
+          {code:"BAR000" , description: {thickness: "1/8" , width: "5/8", weight:2.19 ,in:162 }, price:153600  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "5/8", weight:3.79 ,in: }, price:266200  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "3/4", weight:4.81 ,in:274 }, price:337500  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "1 1/4", weight:7.35 ,in:379 }, price:515900  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "1 1/2", weight:9.89 ,in:482 }, price:694300  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "2", weight:12.42 ,in:583 }, price:872600  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "2 1/2", weight:14.96 ,in:688 }, price:1051000  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "3 1/4", weight:20.04 ,in:885 }, price:1407700  }
+          {code:"BAR000" , description: {thickness: "3/16" , width: "4", weight:25.12 ,in:1080 }, price:1764300  }
+          {code:"BAR000" , description: {thickness: "3/8" , width: "1 1/2", weight:19.23 ,in:715 }, price:1350300  }
+          {code:"BAR000" , description: {thickness: "3/8" , width: "2", weight:24.30 ,in:852 }, price:1707000  }
+          {code:"BAR000" , description: {thickness: "3/8" , width: "2 1/2", weight:29.38 ,in:985 }, price:2063700  }
+          {code:"BAR000" , description: {thickness: "3/8" , width: "3 1/4", weight:39.54 ,in:1240 }, price:2777600  }
+          {code:"BAR000" , description: {thickness: "3/8" , width: "4", weight:49.70 ,in:1490 }, price:3490500  }
+          {code:"BAR000" , description: {thickness: "3/8" , width: "4 3/4", weight:59.86 ,in:1740 }, price:4204900  }
+
+
+
+      ],
+      wire:[
+
+      ],
+      terminal:[
+
+      ],
+      insulator:{},
+      others:
     ]
   } ;
   return o ;
