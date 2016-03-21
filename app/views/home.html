@@ -42,6 +42,8 @@
         <md-divider ng-if="!$last"></md-divider>
 
         <h2 class="md-title">Selecciona la corriente para tus mini-interruptores</h2>
+      <div class="columns">
+
         <div layout="row">
           <md-input-container class="">
             <label>I nominal</label>
@@ -51,11 +53,20 @@
           </md-input-container>
 
         </div>
+        <div layout="row">
+          <md-input-container class="">
+            <label>No.Polos</label>
+            <md-select ng-model="newPole">
+              <md-option ng-repeat="polo in poles" ng-value="polo">{{polo}} Polos</md-option>
+            </md-select>
+          </md-input-container>
 
+        </div>
+      </div>
   </md-content>
 </div>
 
-<div class="md-padding" ng-cloak ng-show="newImin" >
+<div class="md-padding" ng-cloak ng-show="newPole" >
   <md-content class="md-whiteframe-1dp md-padding" >
     <md-list-item>
     <p> {{ newArmario.name }} </p>
@@ -64,6 +75,5 @@
     </md-list-item>
   </md-content>
 </div>
-
+<pre>form = {{ newBrand | json}}</pre>
 </div>
-<!-- <pre>form = {{ newBrand | json}}</pre> -->
