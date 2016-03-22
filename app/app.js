@@ -20,7 +20,7 @@ app.factory('products', [function() {
           {id: 'A2N', Imin: 125, Imax: 250, Icu: 85, price: 740000, discount: 0.55},
           {id: 'A3N', Imin: 320, Imax: 630, Icu: 85, price: 3228100, discount: 0.55},
         ],
-        in: [15, 30, 40, 60,],
+        in: [15, 30, 40, 60,130],
         icu: [10,25,50,85],
         min: [10, 20, 30, 63]
        },
@@ -120,11 +120,22 @@ app.controller('MainCtrl', [
 
 
 	      angular.forEach($scope.newBrand.breakers, function(breaker) {
+          //Calculo total de precio de interruptor
 
             if ($scope.newI > breaker.Imin && $scope.newI < breaker.Imax) {
               subBreaker = breaker.price*(1-breaker.discount)*(1+0.10);
             }
         });
+
+        // Calculo total de precion de barra de cobre
+        angular.forEach($scope.components.bars, function(bar){
+          if (($scope.newI*1.25) < bar.description.in) {
+            barMts = ($scope.newArmario.dimention.width/1000)*3*1.10;
+            barNum = barMts/5.7;
+            subBar = barNum*bar.price*(1+0.10)*(1-0.54);
+          }
+        });
+        //Calculo total de cable segun numero de medidores y polos
 
         if ($scope.newImin <  50) {
           subWire = ($scope.components.wire[0].price*(1-$scope.components.wire[0].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole+1);
@@ -132,7 +143,7 @@ app.controller('MainCtrl', [
           subWire = ($scope.components.wire[1].price*(1-$scope.components.wire[1].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole+1);
         }
 
-        total = subBreaker + subWire;
+        total = subBreaker + subWire + $scope.newArmario.price + subBar;
 
         return total;
     };
