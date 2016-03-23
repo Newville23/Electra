@@ -20,6 +20,54 @@ app.factory('products', [function() {
           {id: 'A2N', Imin: 125, Imax: 250, Icu: 85, price: 740000, discount: 0.55},
           {id: 'A3N', Imin: 320, Imax: 630, Icu: 85, price: 3228100, discount: 0.55},
         ],
+        minis:{
+          1:[
+            {id: 'S200', In:1 ,Icu: 10, price: 583400, discount: 0.55},
+            {id: 'S200', In:2 ,Icu: 10, price: 686000, discount: 0.55},
+            {id: 'S200', In:3 ,Icu: 10, price: 740000, discount: 0.55},
+            {id: 'S200', In:4 ,Icu: 10, price: 3228100,discount: 0.55},
+            {id: 'S200', In:6 ,Icu: 10, price: 583400, discount: 0.55},
+            {id: 'S200', In:10 ,Icu: 10, price: 686000, discount: 0.55},
+            {id: 'S200', In:16 ,Icu: 10, price: 740000, discount: 0.55},
+            {id: 'S200', In:20 ,Icu: 10, price: 3228100,discount: 0.55},
+            {id: 'S200', In:25 ,Icu: 10, price: 583400, discount: 0.55},
+            {id: 'S200', In:32 ,Icu: 10, price: 686000, discount: 0.55},
+            {id: 'S200', In:40 ,Icu: 10, price: 740000, discount: 0.55},
+            {id: 'S200', In:50 ,Icu: 10, price: 3228100,discount: 0.55},
+            {id: 'S200', In:63 ,Icu: 10, price: 3228100,discount: 0.55},
+          ],
+          2:[
+            {id: 'S200', In:1 ,Icu: 10, price: 583400, discount: 0.55},
+            {id: 'S200', In:2 ,Icu: 10, price: 686000, discount: 0.55},
+            {id: 'S200', In:3 ,Icu: 10, price: 740000, discount: 0.55},
+            {id: 'S200', In:4 ,Icu: 10, price: 3228100,discount: 0.55},
+            {id: 'S200', In:6 ,Icu: 10, price: 583400, discount: 0.55},
+            {id: 'S200', In:10 ,Icu: 10, price: 686000, discount: 0.55},
+            {id: 'S200', In:16 ,Icu: 10, price: 740000, discount: 0.55},
+            {id: 'S200', In:20 ,Icu: 10, price: 3228100,discount: 0.55},
+            {id: 'S200', In:25 ,Icu: 10, price: 583400, discount: 0.55},
+            {id: 'S200', In:32 ,Icu: 10, price: 686000, discount: 0.55},
+            {id: 'S200', In:40 ,Icu: 10, price: 740000, discount: 0.55},
+            {id: 'S200', In:50 ,Icu: 10, price: 3228100,discount: 0.55},
+            {id: 'S200', In:63 ,Icu: 10, price: 3228100,discount: 0.55},
+          ],
+          3:[
+
+          {id: 'S200', In:1 ,Icu: 10, price: 583400, discount: 0.55},
+          {id: 'S200', In:2 ,Icu: 10, price: 686000, discount: 0.55},
+          {id: 'S200', In:3 ,Icu: 10, price: 740000, discount: 0.55},
+          {id: 'S200', In:4 ,Icu: 10, price: 3228100,discount: 0.55},
+          {id: 'S200', In:6 ,Icu: 10, price: 583400, discount: 0.55},
+          {id: 'S200', In:10 ,Icu: 10, price: 686000, discount: 0.55},
+          {id: 'S200', In:16 ,Icu: 10, price: 740000, discount: 0.55},
+          {id: 'S200', In:20 ,Icu: 10, price: 3228100,discount: 0.55},
+          {id: 'S200', In:25 ,Icu: 10, price: 583400, discount: 0.55},
+          {id: 'S200', In:32 ,Icu: 10, price: 686000, discount: 0.55},
+          {id: 'S200', In:40 ,Icu: 10, price: 740000, discount: 0.55},
+          {id: 'S200', In:50 ,Icu: 10, price: 3228100,discount: 0.55},
+          {id: 'S200', In:63 ,Icu: 10, price: 3228100,discount: 0.55},
+        ]
+      },
         in: [15, 30, 40, 60,130],
         icu: [10,25,50,85],
         min: [10, 20, 30, 63]
@@ -143,14 +191,15 @@ app.controller('MainCtrl', [
           subWire = ($scope.components.wire[1].price*(1-$scope.components.wire[1].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole+1);
         }
 
-        total = subBreaker + subWire + $scope.newArmario.price + subBar;
+        manpower = $scope.newArmario.medidores * 20000;
 
+        subtotal = subBreaker + subWire + $scope.newArmario.price + subBar + manpower;
+
+        total = subtotal*(1+0.12)*(1+0.20);
+        iva = total*(1.16);
         return total;
     };
 
-    $scope.quantity = function(product){
-      product.quantity += 1;
-    };
   }
 ]);
 
