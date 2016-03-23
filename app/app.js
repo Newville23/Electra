@@ -20,54 +20,64 @@ app.factory('products', [function() {
           {id: 'A2N', Imin: 125, Imax: 250, Icu: 85, price: 740000, discount: 0.55},
           {id: 'A3N', Imin: 320, Imax: 630, Icu: 85, price: 3228100, discount: 0.55},
         ],
-        minis:{
-          1:[
-            {id: 'S200', In:1 ,Icu: 10, price: 583400, discount: 0.55},
-            {id: 'S200', In:2 ,Icu: 10, price: 686000, discount: 0.55},
-            {id: 'S200', In:3 ,Icu: 10, price: 740000, discount: 0.55},
-            {id: 'S200', In:4 ,Icu: 10, price: 3228100,discount: 0.55},
-            {id: 'S200', In:6 ,Icu: 10, price: 583400, discount: 0.55},
-            {id: 'S200', In:10 ,Icu: 10, price: 686000, discount: 0.55},
-            {id: 'S200', In:16 ,Icu: 10, price: 740000, discount: 0.55},
-            {id: 'S200', In:20 ,Icu: 10, price: 3228100,discount: 0.55},
-            {id: 'S200', In:25 ,Icu: 10, price: 583400, discount: 0.55},
-            {id: 'S200', In:32 ,Icu: 10, price: 686000, discount: 0.55},
-            {id: 'S200', In:40 ,Icu: 10, price: 740000, discount: 0.55},
-            {id: 'S200', In:50 ,Icu: 10, price: 3228100,discount: 0.55},
-            {id: 'S200', In:63 ,Icu: 10, price: 3228100,discount: 0.55},
-          ],
-          2:[
-            {id: 'S200', In:1 ,Icu: 10, price: 583400, discount: 0.55},
-            {id: 'S200', In:2 ,Icu: 10, price: 686000, discount: 0.55},
-            {id: 'S200', In:3 ,Icu: 10, price: 740000, discount: 0.55},
-            {id: 'S200', In:4 ,Icu: 10, price: 3228100,discount: 0.55},
-            {id: 'S200', In:6 ,Icu: 10, price: 583400, discount: 0.55},
-            {id: 'S200', In:10 ,Icu: 10, price: 686000, discount: 0.55},
-            {id: 'S200', In:16 ,Icu: 10, price: 740000, discount: 0.55},
-            {id: 'S200', In:20 ,Icu: 10, price: 3228100,discount: 0.55},
-            {id: 'S200', In:25 ,Icu: 10, price: 583400, discount: 0.55},
-            {id: 'S200', In:32 ,Icu: 10, price: 686000, discount: 0.55},
-            {id: 'S200', In:40 ,Icu: 10, price: 740000, discount: 0.55},
-            {id: 'S200', In:50 ,Icu: 10, price: 3228100,discount: 0.55},
-            {id: 'S200', In:63 ,Icu: 10, price: 3228100,discount: 0.55},
-          ],
-          3:[
+        minis:[
+          {
 
-          {id: 'S200', In:1 ,Icu: 10, price: 583400, discount: 0.55},
-          {id: 'S200', In:2 ,Icu: 10, price: 686000, discount: 0.55},
-          {id: 'S200', In:3 ,Icu: 10, price: 740000, discount: 0.55},
-          {id: 'S200', In:4 ,Icu: 10, price: 3228100,discount: 0.55},
-          {id: 'S200', In:6 ,Icu: 10, price: 583400, discount: 0.55},
-          {id: 'S200', In:10 ,Icu: 10, price: 686000, discount: 0.55},
-          {id: 'S200', In:16 ,Icu: 10, price: 740000, discount: 0.55},
-          {id: 'S200', In:20 ,Icu: 10, price: 3228100,discount: 0.55},
-          {id: 'S200', In:25 ,Icu: 10, price: 583400, discount: 0.55},
-          {id: 'S200', In:32 ,Icu: 10, price: 686000, discount: 0.55},
-          {id: 'S200', In:40 ,Icu: 10, price: 740000, discount: 0.55},
-          {id: 'S200', In:50 ,Icu: 10, price: 3228100,discount: 0.55},
-          {id: 'S200', In:63 ,Icu: 10, price: 3228100,discount: 0.55},
+            pole:1,
+            list:[
+            {id: '2CDS251001 R0014', In:1 ,Icu: 10, price: 46000,discount: 0.55},
+            {id: '2CDS251001 R0024', In:2 ,Icu: 10, price: 46000,discount: 0.55},
+            {id: '2CDS251001 R0034', In:3 ,Icu: 10, price: 46000,discount: 0.55},
+            {id: '2CDS251001 R0044', In:4 ,Icu: 10, price: 46000,discount: 0.55},
+            {id: '2CDS251001 R0064', In:6 ,Icu: 10, price: 32000, discount: 0.55},
+            {id: '2CDS251001 R0104', In:10 ,Icu: 10, price: 32000, discount: 0.55},
+            {id: '2CDS251001 R0164', In:16 ,Icu: 10, price: 32000, discount: 0.55},
+            {id: '2CDS251001 R0204', In:20 ,Icu: 10, price: 32000,discount: 0.55},
+            {id: '2CDS251001 R0254', In:25 ,Icu: 10, price: 32000, discount: 0.55},
+            {id: '2CDS251001 R0324', In:32 ,Icu: 10, price: 32000, discount: 0.55},
+            {id: '2CDS251001 R0404', In:40 ,Icu: 10, price: 46300, discount: 0.55},
+            {id: '2CDS251001 R0504', In:50 ,Icu: 10, price: 52200,discount: 0.55},
+            {id: '2CDS251001 R0634', In:63 ,Icu: 10, price: 53900,discount: 0.55},
+          ]
+        },
+          {
+            pole:2,
+            list:[
+            {id: '2CDS252001 R0014', In:1 ,Icu: 10, price: 146700, discount: 0.55},
+            {id: '2CDS252001 R0024', In:2 ,Icu: 10, price: 146700, discount: 0.55},
+            {id: '2CDS252001 R0034', In:3 ,Icu: 10, price: 146700, discount: 0.55},
+            {id: '2CDS252001 R0044', In:4 ,Icu: 10, price: 146700,discount: 0.55},
+            {id: '2CDS252001 R0064', In:6 ,Icu: 10, price: 71100, discount: 0.55},
+            {id: '2CDS252001 R0104', In:10 ,Icu: 10, price: 71100, discount: 0.55},
+            {id: '2CDS252001 R0164', In:16 ,Icu: 10, price: 71100, discount: 0.55},
+            {id: '2CDS252001 R0204', In:20 ,Icu: 10, price: 71100,discount: 0.55},
+            {id: '2CDS252001 R0254', In:25 ,Icu: 10, price: 71100, discount: 0.55},
+            {id: '2CDS252001 R0324', In:32 ,Icu: 10, price: 71100, discount: 0.55},
+            {id: '2CDS252001 R0404', In:40 ,Icu: 10, price: 113000, discount: 0.55},
+            {id: '2CDS252001 R0504', In:50 ,Icu: 10, price: 102900,discount: 0.55},
+            {id: '2CDS252001 R0634', In:63 ,Icu: 10, price: 107500,discount: 0.55},
+          ]
+        },
+          {
+            pole:3,
+            list:[
+
+          {id: '2CDS253001 R0014', In:1 ,Icu: 10, price: 174000,discount: 0.55},
+          {id: '2CDS253001 R0024', In:2 ,Icu: 10, price: 174000,discount: 0.55},
+          {id: '2CDS253001 R0034', In:3 ,Icu: 10, price: 174000,discount: 0.55},
+          {id: '2CDS253001 R0044', In:4 ,Icu: 10, price: 174000,discount: 0.55},
+          {id: '2CDS253001 R0064', In:6 ,Icu: 10, price: 125500,discount: 0.55},
+          {id: '2CDS253001 R0104', In:10 ,Icu: 10, price: 125500 ,discount: 0.55},
+          {id: '2CDS253001 R0164', In:16 ,Icu: 10, price: 125500 ,discount: 0.55},
+          {id: '2CDS253001 R0204', In:20 ,Icu: 10, price: 125500 ,discount: 0.55},
+          {id: '2CDS253001 R0254', In:25 ,Icu: 10, price: 125500 ,discount: 0.55},
+          {id: '2CDS253001 R0324', In:32 ,Icu: 10, price: 125500 ,discount: 0.55},
+          {id: '2CDS253001 R0404', In:40 ,Icu: 10, price: 170000, discount: 0.55},
+          {id: '2CDS253001 R0504', In:50 ,Icu: 10, price: 192500,discount: 0.55},
+          {id: '2CDS253001 R0634', In:63 ,Icu: 10, price: 214200,discount: 0.55},
         ]
-      },
+      }
+      ],
         in: [15, 30, 40, 60,130],
         icu: [10,25,50,85],
         min: [10, 20, 30, 63]
@@ -75,14 +85,72 @@ app.factory('products', [function() {
 
       {id: 'P02', name: 'Chint',
         breakers: [
-          {id: 'NM1-63S',  Imin: 16, Imax: 63, Icu: 20, price: 134000, discount: 0.58 },
-          {id: 'NM1-125S', Imin: 32, Imax: 125, Icu: 42, price: 142000, discount: 0.58 },
-          {id: 'NM1-250S', Imin: 160, Imax: 250, Icu: 50, price: 211000, discount: 0.58 },
-          {id: 'NM1-400S', Imin: 250, Imax: 400, Icu: 50, price: 660000, discount: 0.58 },
-          {id: 'NM1-630S', Imin: 400, Imax: 630, Icu: 50, price: 1070000, discount: 0.58 },
-          {id: 'NM1-800H', Imin: 700, Imax: 800, Icu: 85, price: 2070000, discount: 0.58 },
-          {id: 'NM1-1250H', Imin: 1000, Imax: 1250, Icu: 85, price: 3300000, discount: 0.58 },
+          {id: 'NM1-63S',  Imin: 16, Imax: 63, Icu: 20, price: 134000, discount: 0.42 },
+          {id: 'NM1-125S', Imin: 32, Imax: 125, Icu: 42, price: 142000, discount: 0.51 },
+          {id: 'NM1-250S', Imin: 160, Imax: 250, Icu: 50, price: 211000, discount: 0.51 },
+          {id: 'NM1-400S', Imin: 250, Imax: 400, Icu: 50, price: 660000, discount: 0.51 },
+          {id: 'NM1-630S', Imin: 400, Imax: 630, Icu: 50, price: 1070000, discount: 0.51 },
+          {id: 'NM1-800H', Imin: 700, Imax: 800, Icu: 85, price: 2070000, discount: 0.51 },
+          {id: 'NM1-1250H', Imin: 1000, Imax: 1250, Icu: 85, price: 3300000, discount: 0.51 },
         ],
+        minis:[
+          {
+
+            pole:1,
+            list:[
+            {id: 'NB1-63H 1P 1A', In:1 ,Icu: 10, price: 15500 ,discount: 0.49},
+            {id: 'NB1-63H 1P 2A', In:2 ,Icu: 10, price: 15500 ,discount: 0.49},
+            {id: 'NB1-63H 1P 3A', In:3 ,Icu: 10, price: 15500 ,discount: 0.49},
+            {id: 'NB1-63H 1P 4A', In:4 ,Icu: 10, price: 15500 ,discount: 0.49},
+            {id: 'NB1-63H 1P 6A', In:6 ,Icu: 10, price: 15500 , discount: 0.49},
+            {id: 'NB1-63H 1P 10A', In:10 ,Icu: 10, price: 15500 , discount: 0.49},
+            {id: 'NB1-63H 1P 16A', In:16 ,Icu: 10, price: 15500 , discount: 0.49},
+            {id: 'NB1-63H 1P 20A', In:20 ,Icu: 10, price: 15500 ,discount: 0.49},
+            {id: 'NB1-63H 1P 25A', In:25 ,Icu: 10, price: 15500 , discount: 0.49},
+            {id: 'NB1-63H 1P 32A', In:32 ,Icu: 10, price: 15500 , discount: 0.49},
+            {id: 'NB1-63H 1P 40A', In:40 ,Icu: 10, price: 15500 , discount: 0.49},
+            {id: 'NB1-63H 1P 50A', In:50 ,Icu: 10, price: 15500 ,discount: 0.49},
+            {id: 'NB1-63H 1P 63A', In:63 ,Icu: 10, price: 15500 ,discount: 0.49},
+          ]
+        },
+          {
+            pole:2,
+            list:[
+            {id: 'NB1-63H 2P 1A', In:1 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 2A', In:2 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 3A', In:3 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 4A', In:4 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 6A', In:6 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 10A', In:10 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 16A', In:16 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 20A', In:20 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 25A', In:25 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 32A', In:32 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 40A', In:40 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 50A', In:50 ,Icu: 10, price:36000, discount: 0.49},
+            {id: 'NB1-63H 2P 63A', In:63 ,Icu: 10, price:36000, discount: 0.49},
+          ]
+        },
+          {
+            pole:3,
+            list:[
+
+          {id: 'NB1-63H 3P 1A', In:1 ,Icu: 10, price: 52200,discount: 0.49},
+          {id: 'NB1-63H 3P 2A', In:2 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 3A', In:3 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 4A', In:4 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 6A', In:6 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 10A', In:10 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 16A', In:16 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 20A', In:20 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 25A', In:25 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 32A', In:32 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 40A', In:40 ,Icu: 10, price: 49500, discount: 0.49},
+          {id: 'NB1-63H 3P 50A', In:50 ,Icu: 10, price: 49500,discount: 0.49},
+          {id: 'NB1-63H 3P 63A', In:63 ,Icu: 10, price: 49500,discount: 0.49},
+        ]
+      }
+    ],
         in: [60, 80, 70, 100, 450],
         icu: [10,25,50,85],
         min: [15, 32, 63]
@@ -129,13 +197,13 @@ app.config([
   function($stateProvider, $urlRouterProvider){
 
       $stateProvider.state(
-        'home',{
-          url: '/home',
+        'armarios',{
+          url: '/armarios',
           templateUrl: 'views/home.html',
           controller: 'MainCtrl'
         });
 
-        $urlRouterProvider.otherwise('home');
+        $urlRouterProvider.otherwise('armarios');
   }]);
 
 
@@ -164,8 +232,13 @@ app.controller('MainCtrl', [
     };
 
     $scope.total = function() {
-	        var total = 0;
-
+	        var total = 0,
+              subBreaker = 0,
+              subWire = 0,
+              subBar = 0,
+              manpower = 0,
+              subMini = 0
+              ;
 
 	      angular.forEach($scope.newBrand.breakers, function(breaker) {
           //Calculo total de precio de interruptor
@@ -183,19 +256,21 @@ app.controller('MainCtrl', [
             subBar = barNum*bar.price*(1+0.10)*(1-0.54);
           }
         });
+
         //Calculo total de cable segun numero de medidores y polos
 
         if ($scope.newImin <  50) {
-          subWire = ($scope.components.wire[0].price*(1-$scope.components.wire[0].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole+1);
+          subWire = ($scope.components.wire[0].price*(1-$scope.components.wire[0].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole.pole+1);
         }else {
-          subWire = ($scope.components.wire[1].price*(1-$scope.components.wire[1].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole+1);
+          subWire = ($scope.components.wire[1].price*(1-$scope.components.wire[1].discount)*(1+0.10))*($scope.newArmario.dimention.high/1000)*$scope.newArmario.medidores*($scope.newPole.pole+1);
         }
 
-        manpower = $scope.newArmario.medidores * 20000;
+        manpower = $scope.newArmario.medidores * 20000 * (1+0.20);
+        subMini = $scope.newMin.price * $scope.newArmario.medidores *(1+0.1)*(1-$scope.newMin.discount);
 
-        subtotal = subBreaker + subWire + $scope.newArmario.price + subBar + manpower;
+        subtotal = subBreaker + subWire + $scope.newArmario.price + subBar + manpower + subMini;
 
-        total = subtotal*(1+0.12)*(1+0.20);
+        total = subtotal*(1+0.12)*(1+0.20)*(1-($scope.discount/100));
         iva = total*(1.16);
         return total;
     };

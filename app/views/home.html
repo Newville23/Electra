@@ -1,7 +1,5 @@
 <div ng-controller="MainCtrl">
 
-
-
 <div  class="md-padding" ng-cloak>
   <md-content class="md-whiteframe-1dp md-padding">
     <h2 class="md-title">Selecciona el armario que necesites</h2>
@@ -20,7 +18,7 @@
     <div layout="row">
       <md-input-container class="">
         <label>Escoja su marca</label>
-        <md-select ng-model="newBrand">
+        <md-select ng-model="newBrand" ng-disabled="!newArmario">
           <md-option ng-repeat="brand in brands" ng-value="brand">{{brand.name}}</md-option>
         </md-select>
       </md-input-container>
@@ -32,7 +30,7 @@
     <div layout="row">
       <md-input-container class="">
         <label>I nominal</label>
-        <md-select ng-model="newI">
+        <md-select ng-model="newI" ng-disabled="!newBrand">
           <md-option ng-repeat="In in newBrand.in" ng-value="In">{{In}} A</md-option>
         </md-select>
       </md-input-container>
@@ -42,22 +40,20 @@
         <md-divider ng-if="!$last"></md-divider>
 
         <h2 class="md-title">Selecciona la corriente para tus mini-interruptores</h2>
-      <div class="columns">
+      <div class="column">
 
-        <div layout="row">
-          <md-input-container class="">
-            <label>I nominal</label>
-            <md-select ng-model="newImin">
-              <md-option ng-repeat="Imin in newBrand.min" ng-value="Imin">{{Imin}} A</md-option>
-            </md-select>
-          </md-input-container>
-
-        </div>
         <div layout="row">
           <md-input-container class="">
             <label>No.Polos</label>
-            <md-select ng-model="newPole">
-              <md-option ng-repeat="polo in poles" ng-value="polo">{{polo}} Polos</md-option>
+            <md-select ng-model="newPole" ng-disabled="!newI">
+              <md-option ng-repeat="polo in newBrand.minis" ng-value="polo">{{polo.pole}} Polos</md-option>
+            </md-select>
+          </md-input-container>
+
+          <md-input-container class="">
+            <label>I nominal</label>
+            <md-select ng-model="newMin" ng-disabled="!newPole">
+              <md-option ng-repeat="Imin in newPole.list" ng-value="Imin">{{Imin.In}} A</md-option>
             </md-select>
           </md-input-container>
 
@@ -66,14 +62,25 @@
   </md-content>
 </div>
 
-<div class="md-padding" ng-cloak ng-show="newPole" >
+<div class="md-padding" ng-cloak ng-show="newMin" >
   <md-content class="md-whiteframe-1dp md-padding" >
     <md-list-item>
-    <p> {{ newArmario.name }} </p>
-    <p> Total: {{total() | currency}}</p>
+      <div layout="column">
 
+        <p> {{ newArmario.name }} </p>
+
+
+        <p> Total: {{total() | currency}}</p>
+        <div flex layout="row" layout-align="center center">
+          <span class="md-body-1">descuento</span>
+          <md-slider flex md-discrete ng-model="discount" step="5" min="0" max="25" aria-label="rating">
+          </md-slider>
+        </div>
+
+      </div>
     </md-list-item>
   </md-content>
+
 </div>
-<pre>form = {{ newBrand | json}}</pre>
+  <!-- <pre>form = {{ newBrand | json}}</pre> -->
 </div>
